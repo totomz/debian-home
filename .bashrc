@@ -116,3 +116,6 @@ alias ls='ls -ahl --color=auto'
 
 # kill jboss
 alias killjb="sudo kill -9  $(ps -ef | grep jboss | grep -v grep | grep -v /bin/sh | awk '{print $2}' )"
+
+
+
