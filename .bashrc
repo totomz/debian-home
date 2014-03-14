@@ -113,6 +113,7 @@ fi
 ###########
 
 alias ls='ls -ahl --color=auto'
+alias rm='rm -f'
 
 # Get the pid of jboss
 alias jbosspid="ps aux | grep jboss"
