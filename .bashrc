@@ -112,14 +112,15 @@ fi
 # TOMMASO #
 ###########
 
+# command aliases
 alias ls='ls -ahl --color=auto'
 alias rm='rm -f'
+alias cim='vim'
 
-# Get the pid of jboss
+# Short commands
 alias jbosspid="ps aux | grep jboss"
-
-# kill jboss
 alias killjb="sudo kill -9  $(ps -ef | grep jboss | grep -v grep | grep -v /bin/sh | awk '{print $2}' )"
 
-
+# utils
+alias dropbox='~/utils/dropbox-uploader/dropbox_uploader.sh'
 
