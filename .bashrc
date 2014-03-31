@@ -112,6 +112,11 @@ fi
 # TOMMASO #
 ###########
 
+# Custom functions
+cdLocate() {
+    cd $(dirname $(locate $1 | head -n 1));    
+}
+
 # command aliases
 alias ls='ls -ahl --color=auto'
 alias rm='rm -f'
@@ -123,4 +128,4 @@ alias killjb="sudo kill -9  $(ps -ef | grep jboss | grep -v grep | grep -v /bin/
 
 # utils
 alias dropbox='~/utils/dropbox-uploader/dropbox_uploader.sh'
-
+alias cdlocate=cdLocate
