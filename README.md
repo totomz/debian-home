@@ -17,3 +17,19 @@ The install script link all the contets of debian-home in your home (except .git
 utils
 =====
 In the utils folder there are utilities tool, like the dropbox oploader. The intasll script should automatically put alais reference to the executables in the .bashrc
+
+
+Additional functions defined are:
+
+jbosspid
+--------
+Shorthand for 'ps aux | grep jboss'
+
+cdlocate($what)
+--------
+Locate $what and try to change to that
+
+
+dropbox
+-------
+Use Dropbox to share files!
