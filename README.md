@@ -12,6 +12,10 @@ chmod u+x install.sh
 ./install.sh
 ```
 
+Since I hate git, I had to write the following commands:
+
+
+
 The install script link all the contets of debian-home in your home (except .git).
 
 utils
