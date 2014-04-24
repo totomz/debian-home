@@ -117,6 +117,23 @@ cdLocate() {
     cd $(dirname $(locate $1 | head -n 1));    
 }
 
+# Return the PID of a thread that can be used to look a thread from TOP in a threadDump
+javaPID() {
+    printf "0x%x\n" $1
+}
+
+# Call multiple times ./jstack with jboss user
+jstacker() {
+    i=0;
+    while true
+        do
+            sudo -u jboss ./jstack -J-d64 $1 >> /tmp/dump.txt;
+            echo $(date) fatto;
+            i=$((i+1));
+            sleep 10;
+        done;
+}
+
 # command aliases
 alias ls='ls -ahl --color=auto'
 alias rm='rm -f'
@@ -129,3 +146,4 @@ alias killjb="sudo kill -9  $(ps -ef | grep jboss | grep -v grep | grep -v /bin/
 # utils
 alias dropbox='~/utils/dropbox-uploader/dropbox_uploader.sh'
 alias cdlocate=cdLocate
+alias javapid=javaPID
