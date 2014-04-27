@@ -142,6 +142,7 @@ alias cim='vim'
 # Short commands
 alias jbosspid="ps aux | grep jboss"
 alias killjb="sudo kill -9  $(ps -ef | grep jboss | grep -v grep | grep -v /bin/sh | awk '{print $2}' )"
+alias getpid="ps aux | grep $1"
 
 # utils
 alias dropbox='~/utils/dropbox-uploader/dropbox_uploader.sh'
