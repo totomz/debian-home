@@ -148,3 +148,7 @@ alias getpid="ps aux | grep $1"
 alias dropbox='~/utils/dropbox-uploader/dropbox_uploader.sh'
 alias cdlocate=cdLocate
 alias javapid=javaPID
+
+# BASH complete functions
+# SSH
+complete -W "$(echo $(grep '^ssh ' .bash_history | sort -u | sed 's/^ssh \([a-zA-Z0-9_-@]*\).*/\1/'))" ssh
