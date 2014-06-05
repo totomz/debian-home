@@ -22,7 +22,7 @@ git pull
 
 svn commit
 ```bash
-git commit -a
+git add -A && git commit 
 git push
 ```
 
