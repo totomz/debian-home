@@ -6,3 +6,9 @@ find -maxdepth 1 -mindepth 1 -not -name .git -not -name README.md -not -name LIC
 
 # Update the bashrc
 source ~/.bashrc
+
+# Download Xbindkeys (to control Spotify)
+sudo apt-get install xbindkeys
+sudo apt-get install xbindkeys-config
+sudo apt-get install xvkbd
+xbindkeys
