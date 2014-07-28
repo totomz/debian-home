@@ -135,7 +135,7 @@ jstacker() {
 }
 
 # command aliases
-alias ls='ls -ahl --color=auto'
+alias ls='ls -AhlG --color=auto'
 alias rm='rm -f'
 alias cim='vim'
 
