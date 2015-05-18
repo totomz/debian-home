@@ -152,3 +152,15 @@ alias javapid=javaPID
 # BASH complete functions
 # SSH
 complete -W "$(echo $(grep '^ssh ' .bash_history | sort -u | sed 's/^ssh \([a-zA-Z0-9_-@]*\).*/\1/'))" ssh
+
+PERL_MB_OPT="--install_base \"~/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=~/perl5"; export PERL_MM_OPT;
+
+export PATH="$PATH:~/bin"
+export PERL5LIB=~/perl5/lib/perl5
+
+# The next line updates PATH for the Google Cloud SDK.
+source ~/google-cloud-sdk/path.bash.inc
+
+# The next line enables bash completion for gcloud.
+source ~/google-cloud-sdk/completion.bash.inc
