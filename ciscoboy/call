@@ -1,0 +1,44 @@
+#!/usr/bin/perl
+
+use Net::Telnet;
+use Time::HiRes;
+
+# cisco phone host name
+my $host='192.168.48.27';
+# cisco phone password
+my $password='cisco404';
+# mute on a dial 0/1
+my $mute=0;
+
+my $sleeptime=.2;
+my $prompt='/> $/';
+
+my $number=join('', @ARGV);
+
+# We want number only (and change + with 00)
+$number =~ s/\s//g;
+$number =~ s/\.//g;
+$number =~ s/\+/00/g;
+
+print "Calling $number\n";
+
+$telnet = new Net::Telnet ( Timeout=>3, Errmode=>'die');
+# connecting
+$telnet->open($host);
+$telnet->waitfor('/Password :$/i'); 
+$telnet->print($password); 
+$telnet->waitfor($prompt);
+
+$telnet->print('test open');
+$telnet->waitfor($prompt);
+$telnet->print('test key spkr'); 
+$telnet->waitfor($prompt);Time::HiRes::sleep($sleeptime);
+if($mute){
+    $telnet->print('test key mute');
+    $telnet->waitfor($prompt);Time::HiRes::sleep($sleeptime);
+}
+$telnet->print("test key ".$number."#");
+$telnet->waitfor($prompt);Time::HiRes::sleep((length($number)+1)*$sleeptime);
+$telnet->print('test close');
+$telnet->waitfor($prompt);
+$telnet->close($host);
