@@ -134,6 +134,16 @@ jstacker() {
         done;
 }
 
+# in-place xml format
+lintxml() {
+    for f in *.xml
+    do  
+        echo $f
+        xmllint --format $f > $f.lintato
+        mx $f.lintato > $f
+    done
+}
+
 
 installjava() {
 	echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu precise main" | tee /etc/apt/sources.list.d/webupd8team-java.list

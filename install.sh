@@ -12,7 +12,7 @@ git config user.email "tom@tomtom.net"
 git config user.name "totomz"
 
 # Download some cool stuff (vim and git should be already here)
-apps=" vim dnsutils mlocate"
+apps=" vim dnsutils mlocate libxml2-utils"
 echo "Can I install $apps for you? (y|N)"
 read instApp
 if [ "$instApp" == 'y' ]
