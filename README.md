@@ -45,3 +45,10 @@ Locate $what and try to change to that
 dropbox
 -------
 Use Dropbox to share files!
+
+Commands
+========
+
+How to change styles?
+-----------------------
+/usr/share/themes/<tema/gtk-3.0/gtk.css
