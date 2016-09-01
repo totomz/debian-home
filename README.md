@@ -1,7 +1,7 @@
 debian-home
 ===========
 
-Defaults scripts and configurations for /home in Debian
+Defaults scripts and configurations for my /home 
 
 Installation
 ============
@@ -12,19 +12,6 @@ chmod u+x install.sh
 ./install.sh
 ```
 The install script link all the contets of debian-home in your home (except .git).
-
-I hate git, so:
-
-svn update
-```bash
-git pull
-```
-
-svn commit
-```bash
-git add -A && git commit 
-git push
-```
 
 utils
 =====
